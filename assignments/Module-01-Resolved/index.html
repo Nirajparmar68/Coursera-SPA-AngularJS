@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Lunch Check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .emptyMessage {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      button > span {
+        color: green;
+      }
+    </style>
+  </head>
+<body ng-app="LunchCheckApp">
+  <div class="container">
+  <h1>Let's have lunch with Module 1 Assignment together</h1>
+
+  <div class="row" ng-controller="LunchCheckController">
+    <br/>
+    <h2>Please enter your favorite items usually you eat for lunch:</h2>
+
+    <input type="text" ng-model="items" size="50" placeholder="{{pHold}}" />
+    <!-- list comma-separated items ie. item1,item2,etc. -->
+    <br/><br/>
+    <button ng-click="checkFood()" class="btn btn-info"><span class="glyphicon glyphicon-ok"></span> Check If Too Much</button>
+    <br /><br />
+    <!-- To Buy List -->
+    <div class="col-md-6">
+     <div class="emptyMessage" style="color:{{_Color}};">{{emptyMessage}}</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
